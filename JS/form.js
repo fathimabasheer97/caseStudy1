@@ -7,13 +7,13 @@ function login(usr,pass,redirect)
 {
     // window.location.href="main.html";
     redirect();
-    alert("Your input is correct");
+    alert("You entered a valid input");
     return true;  
    
 }
 else
 {
-    alert("You have entered false input");
+    alert("Incorrect username or password");
     return false;
 }
 }
