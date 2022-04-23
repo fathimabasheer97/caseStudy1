@@ -1,0 +1,30 @@
+ #form
+{
+    height: 20em;
+    margin-top: 12%;
+    margin-right: 2%;
+    padding: 30px;
+    margin-left: 25%;
+}
+.form-row
+{
+    padding: 2%;
+}
+.form-group
+{
+    padding: 1%;
+} 
+body
+{
+    background-size: cover;
+}
+.navbar-nav{
+    margin-left: 42%;
+}
+#demo{
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: double black ;
+    background-color:aliceblue;
+}
