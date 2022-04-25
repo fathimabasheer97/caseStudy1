@@ -20,46 +20,46 @@ xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
 xhttp.send();
 
 // CHECKBOX VALIDATION
-// var checkBoxes = document.getElementById("ck");
-// let selectedItems = [];
-//         function check()
-//         {
-//             checkBoxes.forEach(item => {
-//                 if(item.checked){
-//                 selectedItems.push(item);
-//                 }
-//             });
-//         }
-// function validate()
-// {
-//     var promise= new Promise(function(resolve,reject){
-//         if(selectedItems.length == 5){
-//             resolve("Congrats. 5 Tasks have been Successfully Completed");
-//         }
-//         else{
-//             reject("Error occured");
-//         }
-//     });
-// }
-// check().then(validate).catch(function(e)
-// {console.log(e);})
-
-function selectedBoxes(f) {
-	let selectedBoxesArr = [];
-	let inputFields = f.getElementById('ck');
-	let inputFieldsNumber = inputFields.length;
-
-	for(let i=0; i<inputFieldsNumber; i++) {
-		if(
-			inputFields[i].type == 'checkbox' &&
-			inputFields[i].checked == true
-		) selectedBoxesArr.push(inputFields[i].value);
-	}
-	return selectedBoxesArr;
+var checkBoxes = document.getElementById("ck");
+let selectedItems = [];
+        function check()
+        {
+            checkBoxes.forEach(item => {
+                if(item.checked){
+                selectedItems.push(item);
+                }
+            });
+        }
+function validate()
+{
+        return new Promise(function(resolve,reject){
+        if(selectedItems.length == 5){
+            resolve("Congrats. 5 Tasks have been Successfully Completed");
+        }
+        else{
+            reject("Error occured");
+        }
+    });
 }
+check().then(validate).catch(function(e)
+{console.log(e);})
 
-var getRecipesButton = document.getElementById('div');
-getRecipesButton.addEventListener("click", function(){
-	let selectedCheckBoxes = selectedBoxes(this.form);
-	alert(selectedCheckBoxes);
-});
+// function selectedBoxes(f) {
+// 	let selectedBoxesArr = [];
+// 	let inputFields = f.getElementById('ck');
+// 	let inputFieldsNumber = inputFields.length;
+
+// 	for(let i=0; i<inputFieldsNumber; i++) {
+// 		if(
+// 			inputFields[i].type == 'checkbox' &&
+// 			inputFields[i].checked == true
+// 		) selectedBoxesArr.push(inputFields[i].value);
+// 	}
+// 	return selectedBoxesArr;
+// }
+
+// var getRecipesButton = document.getElementById('div');
+// getRecipesButton.addEventListener("click", function(){
+// 	let selectedCheckBoxes = selectedBoxes(this.form);
+// 	alert(selectedCheckBoxes);
+// });
